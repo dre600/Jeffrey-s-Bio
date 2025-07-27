@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+  <label>Name: <input type="text" id="name" name="name"></label><br>
+  <label>Email: <input type="email" id="email" name="email"></label><br>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop the form from submitting
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    if (!name || !email) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // You can now process the data or send it using AJAX
+    alert(`Form submitted!\nName: ${name}\nEmail: ${email}`);
+  });
+</script>
+</body>
+</html>

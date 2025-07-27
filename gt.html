@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>for you page</title>
+</head>
+ <style>
+    body {
+
+        font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+    header {
+      background: #1e1e1e;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    .feed {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 600px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .card-description {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>For You</h1>
+  </header>
+
+  <main class="feed" id="feed">
+    <!-- Cards will be injected here -->
+  </main>
+
+  <script>
+    const content = [
+      {
+        title: "Top Travel Destinations for 2025",
+        description: "Explore hidden gems and popular places for your next adventure.",
+        image: "https://source.unsplash.com/600x400/?travel"
+      },
+      {
+        title: "10 Tips for a Healthy Lifestyle",
+        description: "Small changes that can make a big impact on your well-being.",
+        image: "https://source.unsplash.com/600x400/?health"
+      },
+      {
+        title: "Mastering JavaScript in 30 Days",
+        description: "A complete guide for beginners to become JavaScript pros.",
+        image: "https://source.unsplash.com/600x400/?javascript"
+      }
+    ];
+
+    const feed = document.getElementById("feed");
+
+    content.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${item.image}" alt="${item.title}" />
+        <div class="card-content">
+          <div class="card-title">${item.title}</div>
+          <div class="card-description">${item.description}</div>
+        </div>
+      `;
+      feed.appendChild(card);
+    });
+  </script>
+</body>
+</html>

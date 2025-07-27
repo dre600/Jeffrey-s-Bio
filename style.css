@@ -1,0 +1,159 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+ background: url('images/bhia.jpg') no-repeat center center fixed;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+display: block;
+position: relative;
+height: 100vh;
+margin: 0;
+font-family: 'open Sans', sans-serif;
+  color: #000000; /* Optional: light text on dark background */
+}
+p{
+    text-align: justify;
+}
+h1,h2,h3,h4,h5,h6,h7,h8{
+     text-align: center;
+    color:purple;
+    font-size: 1.5rem;
+}
+a:link, a:visited{
+    text-decoration:none;
+    color:rgb(30, 30, 31);
+    font-weight:bold;
+    transition: color 0.3s ease;
+}
+a:hover{
+    color:black;
+}
+/* Navigation Container */
+nav {
+  background-color: black;
+  padding: 0;
+}
+
+/* Unordered List Styling */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* List Items */
+nav li {
+  margin: 0;
+}
+
+/* Link Styles */
+nav a {
+  display: block;
+  padding: 12px 24px;
+  color: white;
+  background-color: rgb(143, 12, 136);
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effects */
+nav a:hover {
+  background-color: blue;
+  color: #fff;
+}
+
+/* Responsive Navigation: Stack on smaller screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav a {
+    border-top: 1px solid #444;
+    width: 100%;
+  }
+}
+aside {
+    width: 280px;
+    float: right;
+    background-color: rgb(151, 17, 151);
+    text-align: center;
+    font-weight:bold;
+    padding: 20px;
+    margin-left: 15px;
+}
+.photo-left {
+    float:left;
+    margin-right: 20px;
+}
+.photo-right{
+    float: right;
+    margin-left: 20px;
+}
+header{
+    background-image: url("images/images\ \(1\).jpg") ;
+    height: 100px;
+    margin-bottom: 70px;
+}
+header h1{
+    color:rgba(red, green, blue, alpha 256, 256, 256,8);
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 50px;
+}
+footer{
+    margin: 40px 0;
+}
+footer nav a:link footer nav a:visited{
+    color: gray;
+    text-decoration: none;
+    display: block;
+    width: 250px;
+    text-align: center;
+    background-color: white;
+}
+footer nav a:hover{
+    color: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer-social {
+  margin-bottom: 15px;
+}
+
+.footer-social a {
+  color: rgba(145, 13, 13, 1);
+  margin: 0 10px;
+  font-size: 24px;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #3d3dc4; /* Customize hover color */
+  transform: scale(1.2);
+}
+
+
+
+
