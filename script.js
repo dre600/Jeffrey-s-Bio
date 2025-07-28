@@ -38,3 +38,25 @@
     });
   });
 
+  const modal = document.getElementById("imageModal");
+  const thumbnail = document.getElementById("thumbnail");
+  const enlargedImg = document.getElementById("enlargedImg");
+  const closeBtn = document.querySelector(".close");
+
+  thumbnail.onclick = function () {
+    console.log("Enlarging Image");
+    
+    modal.style.display = "block";
+    enlargedImg.src = this.src;
+  }
+
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+
